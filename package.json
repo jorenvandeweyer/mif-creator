@@ -1,0 +1,15 @@
+{
+  "name": "mif-creator",
+  "version": "1.0.0",
+  "description": "Create mif files for verilog",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "author": "Joren Vandeweyer",
+  "license": "ISC",
+  "dependencies": {
+    "get-pixels": "^3.3.0"
+  }
+}
