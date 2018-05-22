@@ -32,7 +32,6 @@ async function question(string) {
 async function createMif(filename) {
     const pixels = await getPixels(filename);
 
-    const depth = pixels.shape[2];
     const data = pixels.data;
 
     let content = [];
@@ -43,14 +42,14 @@ async function createMif(filename) {
 -- by Joren Vandeweyer
 -- https://github.com/jorenvandeweyer/mif-creator
 WIDTH=${24};
-DEPTH=${depth};
+DEPTH=${content.length};
 
 ADDRESS_RADIX=UNS;
 DATA_RADIX=HEX;
 
 CONTENT BEGIN
     ${content.join("\n    ")}
-END;`;
+END;\n`;
 }
 
 function hexCheck(hex) {
