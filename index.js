@@ -37,7 +37,7 @@ async function createMif(filename) {
 
     let content = [];
     for (let i = 0; i < data.length; i+=4) {
-        content.push(getHex(data[i], data[i+1], data[i+2]));
+        content.push(`${i/4}\t:\t${getHex(data[i], data[i+1], data[i+2])};`);
     }
     return `-- MIF file create by mif-creator
 -- by Joren Vandeweyer
